@@ -136,12 +136,9 @@ def send_feishu_card(alerts):
         change_str = f"+{change:.2f}%" if change > 0 else f"{change:.2f}%"
 
         # K线链接 (Coinglass 或 Binance)
-        # Binance App Scheme: binance://futures/BTCUSDT (手机端可能唤起App)
-        # Web Link: https://www.binance.com/zh-CN/futures/BTCUSDT
-        # Coinglass: https://www.coinglass.com/zh/tv/Binance_BTCUSDT
-
-        # 这里使用 Binance Web 链接，兼容性最好
-        link = f"https://www.binance.com/zh-CN/futures/{item['symbol']}"
+        # AICoin 链接 (适合大陆用户，直连)
+        # 格式: https://www.aicoin.com/chart/btcusdt:binance
+        link = f"https://www.aicoin.com/chart/{item['symbol'].lower()}:binance"
 
         # 行格式: 🚀 BTC +1.2% $68000
         line = f"{trend} [{symbol}]({link}) {change_str} ${price_str}"
