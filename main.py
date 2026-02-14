@@ -229,9 +229,9 @@ def send_feishu(alerts):
         # 价格精度智能处理
         price_str = f"{item['price']:.2f}" if item['price'] > 10 else f"{item['price']:.4f}"
 
-        # AICoin K线链接 (大陆用户体验最佳)
-        # 格式: https://www.aicoin.com/chart/btcusdt:binance
-        link = f"https://www.aicoin.com/chart/{symbol.lower()}usdt:binance"
+        # Coinglass K线链接 (支持持仓/多空数据)
+        # 格式: https://www.coinglass.com/tv/Binance_BTCUSDT
+        link = f"https://www.coinglass.com/tv/Binance_{item['symbol']}"
 
         line = f"{item['trend']} **[{symbol}]({link})** `{change_str}` <font color='grey'>${price_str}</font>"
         lines.append(line)

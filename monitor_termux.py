@@ -136,9 +136,9 @@ def send_feishu_card(alerts):
         change_str = f"+{change:.2f}%" if change > 0 else f"{change:.2f}%"
 
         # K线链接 (Coinglass 或 Binance)
-        # AICoin 链接 (适合大陆用户，直连)
-        # 格式: https://www.aicoin.com/chart/btcusdt:binance
-        link = f"https://www.aicoin.com/chart/{item['symbol'].lower()}:binance"
+        # Coinglass K线链接
+        # 格式: https://www.coinglass.com/tv/Binance_BTCUSDT
+        link = f"https://www.coinglass.com/tv/Binance_{item['symbol']}"
 
         # 行格式: 🚀 BTC +1.2% $68000
         line = f"{trend} [{symbol}]({link}) {change_str} ${price_str}"
