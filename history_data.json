@@ -1,0 +1,12 @@
+[
+    {
+        "symbol": "BTCUSDT",
+        "price": 68000.0,
+        "timestamp": 1700000000
+    },
+    {
+        "symbol": "ETHUSDT",
+        "price": 3500.0,
+        "timestamp": 1700000000
+    }
+]
